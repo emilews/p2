@@ -1,5 +1,6 @@
 package com.javacodegeeks.patterns.proxypattern.remoteproxy;
 
+import java.io.IOException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -10,6 +11,8 @@ import java.util.Date;
 public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGenerator{
 
 	private static final long serialVersionUID = 3107413009881629428L;
+	static EmployeeList employeeList;
+	static Stores stores;
 
 	protected ReportGeneratorImpl() throws RemoteException {
 	}
@@ -22,28 +25,53 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 	}
 
 	@Override
-	public String getStoresInfo(int numStore) {
-		return Stores.getStore(numStore);
+	public String getStoresInfo(String name) {
+		return stores.getStore(name);
 	}
 
 	@Override
-	public String getStoreSalesData(int numStore, int privileges) {
+	public String getStoreSalesData(String name, int privileges) {
 		if(privileges > 1){
-			return Stores.getDailySalesByStore(numStore);
+			return stores.getDailySalesByStore(name);
 		}else { return "Not enough privileges!"; }
 	}
 
 	@Override
 	public int getOverallSalesData(int privileges) {
 		if(privileges > 1){
-			return Stores.getOverallSales();
+			return stores.getOverallSales();
 		}else{
 			return -1;
 		}
 	}
 
+	@Override
+	public boolean addNewUser(String name, String pass, int privileges) throws RemoteException {
+		try {
+			return employeeList.addNewEmployee(name,pass,privileges);
+		} catch (IOException e) {
+		return false;
+		}
+	}
+
+	@Override
+	public boolean addNewStore(String name, String address, int id, int sales) throws RemoteException {
+		try {
+			stores.addNewStore(name,address,id,sales);
+		}catch (Exception e){
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public String getAllStoreNames() throws RemoteException {
+		return stores.getAllStoreNames();
+	}
+
 	public static void main(String[] args) {
-		EmployeeList employeeList = EmployeeList.getInstance();
+		employeeList = EmployeeList.getInstance();
+		stores = Stores.getInstance();
 		try {
 			Registry registry = LocateRegistry.createRegistry(9000);
 			ReportGenerator reportGenerator = new ReportGeneratorImpl();

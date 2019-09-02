@@ -11,8 +11,6 @@ public class EmployeeList {
     private BufferedReader bufferedReader = null;
     //Writer
     private BufferedWriter bufferedWriter = null;
-    //Variable for data holder, an ArrayList that uses the Country object only
-    private static ArrayList<Employee> data = new ArrayList<>();
     //Variable for csv file name
     private static final String CSV_FILE_PATH = System.getProperty("user.dir") +"\\src\\com\\javacodegeeks\\patterns\\" +
             "proxypattern\\remoteproxy\\EmployeeListData.csv";
@@ -35,22 +33,19 @@ public class EmployeeList {
     public void populate() throws IOException {
         bufferedReader = new BufferedReader(new FileReader(new File(CSV_FILE_PATH)));
         String s = "";
-        int i = 0;
         while((s = bufferedReader.readLine()) != null){
-            if(i != 0) {
-                String[] parts = s.split(",");
-                Employee employee = new Employee(parts[0],parts[1],Integer.valueOf(parts[2]));
-                data.add(employee);
-            }
-            i++;
+            String[] parts = s.split(",");
+            Employee employee = new Employee(parts[0],parts[1],Integer.valueOf(parts[2]));
+            employees.add(employee);
         }
+
     }
     public boolean addNewEmployee(String name, String pass, int privileges) throws IOException {
         Employee e = new Employee(name, pass, privileges);
-        data.add(e);
+        employees.add(e);
         StringBuilder sb = new StringBuilder();
         bufferedWriter = new BufferedWriter(new FileWriter(new File(CSV_FILE_PATH)));
-        for(EmployeeList.Employee employee : data){
+        for(EmployeeList.Employee employee : employees){
             sb.append(employee.getName());
             sb.append(",");
             sb.append(employee.getPassword());

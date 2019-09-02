@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javacodegeeks.patterns.proxypattern.remoteproxy.EmpController">
+    <children>
+        <Button fx:id="lookForStoreSales" layoutX="400.0" layoutY="175.0" mnemonicParsing="false" onAction="#lookForSalesByStore" text="Buscar" />
+        <ChoiceBox fx:id="storesChoiceBox" layoutX="209.0" layoutY="175.0" prefWidth="150.0">
+        </ChoiceBox>
+    </children>
+</Pane>

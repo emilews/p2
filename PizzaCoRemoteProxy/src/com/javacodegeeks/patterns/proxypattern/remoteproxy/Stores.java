@@ -31,24 +31,22 @@ public class Stores {
     public void populate() throws IOException {
         bufferedReader = new BufferedReader(new FileReader(new File(CSV_FILE_PATH)));
         String s = "";
-        int i = 0;
         while((s = bufferedReader.readLine()) != null){
-            if(i != 0) {
                 String[] parts = s.split(",");
                 Store store = new Store(parts[0],parts[1],Integer.valueOf(parts[2]),Integer.valueOf(parts[3]));
                 data.add(store);
-            }
-            i++;
         }
     }
 
 
-    public static String getStore(int numStore) {
+    public String getStore(String name) {
         StringBuilder sb = new StringBuilder();
         for (Store t : data) {
-            if (t.code == numStore) {
+            if (t.getName().equals(name)) {
                 sb.append(t.getName());
+                sb.append(",");
                 sb.append(t.getAddress());
+                sb.append(",");
                 sb.append(t.getNumber());
                 break;
             }
@@ -57,6 +55,11 @@ public class Stores {
     }
 
     public boolean addNewStore(String name, String address, int id, int sales) throws IOException {
+        for(Store s: data){
+            if(s.getNumber() == id){
+                return false;
+            }
+        }
         Store store = new Store(name, address, id, sales);
         data.add(store);
         StringBuilder sb = new StringBuilder();
@@ -82,12 +85,14 @@ public class Stores {
         return true;
     }
 
-    public static String getDailySalesByStore(int numStore) {
+    public String getDailySalesByStore(String name) {
         StringBuilder sb = new StringBuilder();
         for (Store t : data) {
-            if (t.code == numStore) {
+            if (t.getName().equals(name)) {
                 sb.append(t.getName());
+                sb.append(",");
                 sb.append(t.getNumber());
+                sb.append(",");
                 sb.append(t.getDailySales());
                 break;
             }
@@ -95,12 +100,28 @@ public class Stores {
         return sb.toString();
     }
 
-    public static int getOverallSales(){
+    public int getOverallSales(){
         int sales = 0;
         for(Store s : data){
             sales += s.getDailySales();
         }
         return sales;
+    }
+
+    public String getAllStoreNames(){
+        StringBuilder sb = new StringBuilder();
+        int size = data.size();
+        int i = 0;
+        for(Store s : data){
+            if(i != size){
+                sb.append(s.getName());
+                sb.append(",");
+            }else {
+                sb.append(s.getName());
+            }
+            i++;
+        }
+        return sb.toString();
     }
 
 

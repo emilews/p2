@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javacodegeeks.patterns.proxypattern.remoteproxy.OwnerController">
+   <children>
+      <TextField fx:id="storeNameField" layoutX="187.0" layoutY="90.0" />
+      <TextField fx:id="storeAddressField" layoutX="187.0" layoutY="132.0" />
+      <TextField fx:id="storeCodeField" layoutX="187.0" layoutY="169.0" />
+      <TextField fx:id="storeSalesField" layoutX="187.0" layoutY="209.0" />
+      <Button fx:id="addNewStoreButton" layoutX="284.0" layoutY="260.0" mnemonicParsing="false" onAction="#addNewStorePrePass" text="Añadir" />
+      <Button fx:id="cleanNewStoreDataButton" layoutX="196.0" layoutY="260.0" mnemonicParsing="false" text="Limpiar" />
+      <Label layoutX="122.0" layoutY="94.0" text="Nombre" />
+      <Label layoutX="119.0" layoutY="136.0" text="Dirección" />
+      <Label layoutX="130.0" layoutY="173.0" text="Código" />
+      <Label layoutX="135.0" layoutY="213.0" text="Ventas" />
+      <Button fx:id="backButton" layoutX="43.0" layoutY="30.0" mnemonicParsing="false" onAction="#getBack" text="Atrás" />
+   </children>
+</Pane>

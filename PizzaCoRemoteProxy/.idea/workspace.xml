@@ -2,22 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8489244-6176-40ae-9851-a9789942147f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/libraries/javafx.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList$Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList$Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeListData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeListData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores$Store.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores$Store.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeListData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeListData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/StoreListData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/StoreListData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/PizzaCoReportGeneratorRemoteProtectionProxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/PizzaCoReportGeneratorRemoteProtectionProxy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/META-INF/PizzaCoReportGeneratorRemoteProtectionProxy.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.java" afterDir="false" />
@@ -98,7 +101,7 @@
       <workItem from="1567138294753" duration="4085000" />
       <workItem from="1567178441313" duration="2469000" />
       <workItem from="1567188066704" duration="725000" />
-      <workItem from="1567383952053" duration="7892000" />
+      <workItem from="1567383952053" duration="17003000" />
     </task>
     <servers />
   </component>

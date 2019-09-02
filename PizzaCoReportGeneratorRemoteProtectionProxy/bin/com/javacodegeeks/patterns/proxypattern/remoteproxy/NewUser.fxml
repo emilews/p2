@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javacodegeeks.patterns.proxypattern.remoteproxy.OwnerController">
+   <children>
+      <Button fx:id="addNewUserButton" layoutX="336.0" layoutY="287.0" mnemonicParsing="false" onAction="#newUserPrePass" text="Añadir" />
+      <Label layoutX="114.0" layoutY="110.0" text="Nombre" />
+      <Label layoutX="111.0" layoutY="140.0" text="Password" />
+      <Label layoutX="94.0" layoutY="171.0" text="Tipo de usuario" />
+      <TextField fx:id="newUserNameField" layoutX="232.0" layoutY="106.0" />
+      <TextField fx:id="newUserPasswordField" layoutX="232.0" layoutY="136.0" />
+      <ChoiceBox fx:id="userTierChoiceBox" layoutX="231.0" layoutY="167.0" prefWidth="150.0" value="Empleado">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Empleado" />
+               <String fx:value="Jefe" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Button fx:id="backButton2" layoutX="42.0" layoutY="38.0" mnemonicParsing="false" onAction="#getBack" text="Atrás" />
+   </children>
+</Pane>
