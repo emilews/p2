@@ -1,17 +1,68 @@
 package com.javacodegeeks.patterns.proxypattern.remoteproxy;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeList {
     //Creating list of employees
     private static List<Employee> employees = new ArrayList<>();
-    public static void populate(){
-        //Adding employees
-        employees.add(new Employee("Aileen", "1234*", 2));
-        employees.add(new Employee("Luis Paco", "sanson123", 1));
-        employees.add(new Employee("laslo", "123", 1));
-
+    //Reader
+    private BufferedReader bufferedReader = null;
+    //Writer
+    private BufferedWriter bufferedWriter = null;
+    //Variable for data holder, an ArrayList that uses the Country object only
+    private static ArrayList<Employee> data = new ArrayList<>();
+    //Variable for csv file name
+    private static final String CSV_FILE_PATH = System.getProperty("user.dir") +"\\src\\com\\javacodegeeks\\patterns\\" +
+            "proxypattern\\remoteproxy\\EmployeeListData.csv";
+    //Instance of data holder
+    private static EmployeeList instance;
+    //Private constructor
+    private EmployeeList(){
+        try {
+            populate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    public static synchronized EmployeeList getInstance() {
+        if(instance == null){
+            instance = new EmployeeList();
+        }
+        return instance;
+    }
+    public void populate() throws IOException {
+        bufferedReader = new BufferedReader(new FileReader(new File(CSV_FILE_PATH)));
+        String s = "";
+        int i = 0;
+        while((s = bufferedReader.readLine()) != null){
+            if(i != 0) {
+                String[] parts = s.split(",");
+                Employee employee = new Employee(parts[0],parts[1],Integer.valueOf(parts[2]));
+                data.add(employee);
+            }
+            i++;
+        }
+    }
+    public boolean addNewEmployee(String name, String pass, int privileges) throws IOException {
+        Employee e = new Employee(name, pass, privileges);
+        data.add(e);
+        StringBuilder sb = new StringBuilder();
+        bufferedWriter = new BufferedWriter(new FileWriter(new File(CSV_FILE_PATH)));
+        for(EmployeeList.Employee employee : data){
+            sb.append(employee.getName());
+            sb.append(",");
+            sb.append(employee.getPassword());
+            sb.append(",");
+            sb.append(employee.getPrivileges());
+            bufferedWriter.write(sb.toString());
+            bufferedWriter.write("\n");
+            sb.setLength(0);
+        }
+        bufferedWriter.flush();
+        bufferedWriter.close();
+        return true;
     }
     public static int logIn(String name, String password){
         for(Employee e : employees){
@@ -23,28 +74,14 @@ public class EmployeeList {
                         case 2:
                             return 2;
                     }
-                    return 0;
                 }else {
-                    return -1;
+                    return 0;
                 }
 
             }
         }
         return -1;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     //Inner class
     private static class Employee{

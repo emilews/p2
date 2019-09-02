@@ -1,19 +1,45 @@
 package com.javacodegeeks.patterns.proxypattern.remoteproxy;
 
+import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Stores {
+    //Path of database xd lol as if we used a db
+    private static final String CSV_FILE_PATH = System.getProperty("user.dir") +"\\src\\com\\javacodegeeks\\patterns\\" +
+            "proxypattern\\remoteproxy\\StoreListData.csv";
     private static ArrayList<Store> data = new ArrayList<>();
-    Store store1 = new Store("Pizzas Lupita", "Luis Encinas 410", 1, 25);
-    Store store2 = new Store("Rin Rin", "Progreso y Reyes 150", 2, 86);
-    Store store3 = new Store("Papa Johns", "Morelos 514", 3, 43);
+    private BufferedReader bufferedReader = null;
+    private BufferedWriter bufferedWriter = null;
+    //Instance of data holder
+    private static Stores instance;
+    //Private constructor
+    private Stores(){
+        try {
+            populate();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    public static synchronized Stores getInstance() {
+        if(instance == null){
+            instance = new Stores();
+        }
+        return instance;
+    }
 
 
-    public void populate(){
-        data.add(store1);
-        data.add(store2);
-        data.add(store3);
+    public void populate() throws IOException {
+        bufferedReader = new BufferedReader(new FileReader(new File(CSV_FILE_PATH)));
+        String s = "";
+        int i = 0;
+        while((s = bufferedReader.readLine()) != null){
+            if(i != 0) {
+                String[] parts = s.split(",");
+                Store store = new Store(parts[0],parts[1],Integer.valueOf(parts[2]),Integer.valueOf(parts[3]));
+                data.add(store);
+            }
+            i++;
+        }
     }
 
 
@@ -28,6 +54,32 @@ public class Stores {
             }
         }
         return sb.toString();
+    }
+
+    public boolean addNewStore(String name, String address, int id, int sales) throws IOException {
+        Store store = new Store(name, address, id, sales);
+        data.add(store);
+        StringBuilder sb = new StringBuilder();
+        bufferedWriter = new BufferedWriter(new FileWriter(new File(CSV_FILE_PATH)));
+        for(Store s : data){
+            try {
+                sb.append(s.getName());
+                sb.append(",");
+                sb.append(s.getAddress());
+                sb.append(",");
+                sb.append(s.getNumber());
+                sb.append(",");
+                sb.append(s.getDailySales());
+                bufferedWriter.write(sb.toString());
+                bufferedWriter.write("\n");
+                sb.setLength(0);
+            }catch (Exception e){
+                return false;
+            }
+        }
+        bufferedWriter.flush();
+        bufferedWriter.close();
+        return true;
     }
 
     public static String getDailySalesByStore(int numStore) {

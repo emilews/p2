@@ -17,6 +17,7 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 
 	@Override
 	public int logIn(String username, String password) {
+		System.out.println("Logging in: " + username + " with password: " + password);
 		return EmployeeList.logIn(username,password);
 	}
 
@@ -42,7 +43,7 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 	}
 
 	public static void main(String[] args) {
-		
+		EmployeeList employeeList = EmployeeList.getInstance();
 		try {
 			Registry registry = LocateRegistry.createRegistry(9000);
 			ReportGenerator reportGenerator = new ReportGeneratorImpl();

@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8489244-6176-40ae-9851-a9789942147f" name="Default Changelist" comment="" />
+    <list default="true" id="b8489244-6176-40ae-9851-a9789942147f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/libraries/javafx.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/PizzaCoReportGeneratorRemoteProtectionProxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/PizzaCoReportGeneratorRemoteProtectionProxy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/META-INF/PizzaCoReportGeneratorRemoteProtectionProxy.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Owner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +38,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1Q83F14IfDuDSZTKsWiNOxC6ABY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -39,6 +65,26 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="ReportGeneratorImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.javacodegeeks.patterns.proxypattern.remoteproxy.ReportGeneratorImpl" />
+      <module name="PizzaCoRemoteProxy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javacodegeeks.patterns.proxypattern.remoteproxy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ReportGeneratorImpl" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -51,10 +97,25 @@
       <updated>1567138288820</updated>
       <workItem from="1567138294753" duration="4085000" />
       <workItem from="1567178441313" duration="2469000" />
+      <workItem from="1567188066704" duration="725000" />
+      <workItem from="1567383952053" duration="7892000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

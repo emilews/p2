@@ -11,11 +11,14 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class ReportGeneratorClient extends Application implements ReportGenerator{
-    ReportGenerator reportGenerator = null;
+    static ReportGenerator reportGenerator;
+    private static Stage s = new Stage();
     @FXML
     Button logInButton;
     @FXML
@@ -26,11 +29,18 @@ public class ReportGeneratorClient extends Application implements ReportGenerato
     Label welcomeText;
 
 	public static void main(String[] args) {
-		launch(args);
+        try {
+            Registry registry = LocateRegistry.getRegistry("localhost",9000);
+            reportGenerator = (ReportGenerator)registry.lookup("PizzaCoRemoteGenerator");
+            System.out.println("Connected!");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+	    launch(args);
 	}
 
 	@Override
-	public int logIn(String username, String password) {
+	public int logIn(String username, String password) throws RemoteException {
 		return reportGenerator.logIn(username,password);
 	}
 
@@ -51,40 +61,38 @@ public class ReportGeneratorClient extends Application implements ReportGenerato
 
     @Override
 	public void start(Stage primary) throws Exception {
-	    prepareObjects();
-	    logInButton.setOnAction(e -> {
-	        if(userField != null && passwordField != null){
-	            int result = logIn(userField.getText(), passwordField.getText());
-	            switch (result){
-                    case -1:
-                        welcomeText.setText("User doesn't exist!");
-                        break;
-                    case 1:
-                        changeToEmployeeView();
-                        break;
-                    case 2:
-                        changeToOwnerView();
-                }
-            }
-        });
-		Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-		primary.setTitle("Práctica 2: Pizzas");
-		primary.setScene(new Scene(root, 600,400));
-		primary.show();
+        this.s = primary;
+        Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		this.s.setTitle("Práctica 2: Pizzas");
+		this.s.setScene(new Scene(root, 600,400));
+		this.s.show();
+
 	}
 
-    private void changeToOwnerView() {
+    public void changeToOwnerView() throws IOException {
+        Parent ownerRoot = FXMLLoader.load(getClass().getResource("OwnerView.fxml"));
+        this.s.getScene().setRoot(ownerRoot);
+    }
+    public void changeToEmployeeView() throws IOException {
+        Parent ownerRoot = FXMLLoader.load(getClass().getResource("EmpView.fxml"));
+        this.s.getScene().setRoot(ownerRoot);
     }
 
-    private void changeToEmployeeView() {
-    }
 
-    public void prepareObjects(){
-        try {
-            Registry registry = LocateRegistry.getRegistry("localhost",9000);
-            reportGenerator = (ReportGenerator)registry.lookup("rmi://127.0.0.1/PizzaCoRemoteGenerator");
-        } catch (Exception e) {
-            e.printStackTrace();
+    public void logInAction() throws IOException {
+        if(userField != null && passwordField != null){
+            int result = logIn(userField.getText(), passwordField.getText());
+            switch (result){
+                case -1:
+                    welcomeText.setText("User doesn't exist!");
+                    break;
+                case 1:
+                    changeToEmployeeView();
+                    break;
+                case 2:
+                    changeToOwnerView();
+                    break;
+            }
         }
     }
 }
