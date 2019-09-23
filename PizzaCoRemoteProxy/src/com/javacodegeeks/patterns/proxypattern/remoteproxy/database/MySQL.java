@@ -19,8 +19,8 @@ public class MySQL implements DatabaseActions {
     }
 
     @Override
-    public String[] Read(String query) {
-        return new String[0];
+    public ResultSet Read(String query) {
+        return null;
     }
 
     @Override

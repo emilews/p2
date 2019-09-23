@@ -4,39 +4,16 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Stores {
-    //Path of database xd lol as if we used a db
     //Now we use a database omg
-    private static final String CSV_FILE_PATH = System.getProperty("user.dir") +"\\src\\com\\javacodegeeks\\patterns\\" +
-            "proxypattern\\remoteproxy\\StoreListData.csv";
-    private static ArrayList<Store> data = new ArrayList<>();
-    private BufferedReader bufferedReader = null;
-    private BufferedWriter bufferedWriter = null;
-    //Instance of data holder
     private static Stores instance;
     //Private constructor
     private Stores(){
-        try {
-            populate();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
     }
     public static synchronized Stores getInstance() {
         if(instance == null){
             instance = new Stores();
         }
         return instance;
-    }
-
-
-    public void populate() throws IOException {
-        bufferedReader = new BufferedReader(new FileReader(new File(CSV_FILE_PATH)));
-        String s = "";
-        while((s = bufferedReader.readLine()) != null){
-                String[] parts = s.split(",");
-                Store store = new Store(parts[0],parts[1],Integer.valueOf(parts[2]),Integer.valueOf(parts[3]));
-                data.add(store);
-        }
     }
 
 

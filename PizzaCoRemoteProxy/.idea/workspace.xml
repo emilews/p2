@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b8489244-6176-40ae-9851-a9789942147f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PizzaCoRemoteProxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PizzaCoRemoteProxy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/database/DatabaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/database/DatabaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/database/MySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/database/MySQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/database/PostgreSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/database/PostgreSQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,10 +38,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/postgresql-42.2.8.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -89,7 +93,7 @@
       <workItem from="1567178441313" duration="2469000" />
       <workItem from="1567188066704" duration="725000" />
       <workItem from="1567383952053" duration="17083000" />
-      <workItem from="1569179165078" duration="7841000" />
+      <workItem from="1569179165078" duration="22700000" />
     </task>
     <servers />
   </component>

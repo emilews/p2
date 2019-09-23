@@ -1,28 +1,16 @@
 package com.javacodegeeks.patterns.proxypattern.remoteproxy;
 
+import com.javacodegeeks.patterns.proxypattern.remoteproxy.database.DatabaseActions;
+
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class EmployeeList {
-    //Creating list of employees
-    private static List<Employee> employees = new ArrayList<>();
-    //Reader
-    private BufferedReader bufferedReader = null;
-    //Writer
-    private BufferedWriter bufferedWriter = null;
-    //Variable for csv file name
-    private static final String CSV_FILE_PATH = System.getProperty("user.dir") +"\\src\\com\\javacodegeeks\\patterns\\" +
-            "proxypattern\\remoteproxy\\EmployeeListData.csv";
     //Instance of data holder
     private static EmployeeList instance;
     //Private constructor
     private EmployeeList(){
-        try {
-            populate();
-        }catch(Exception e){
-            e.printStackTrace();
-        }
     }
     public static synchronized EmployeeList getInstance() {
         if(instance == null){
@@ -30,75 +18,71 @@ public class EmployeeList {
         }
         return instance;
     }
-    public void populate() throws IOException {
-        bufferedReader = new BufferedReader(new FileReader(new File(CSV_FILE_PATH)));
-        String s = "";
-        while((s = bufferedReader.readLine()) != null){
-            String[] parts = s.split(",");
-            Employee employee = new Employee(parts[0],parts[1],Integer.valueOf(parts[2]));
-            employees.add(employee);
-        }
 
-    }
-    public boolean addNewEmployee(String name, String pass, int privileges) throws IOException {
-        Employee e = new Employee(name, pass, privileges);
-        employees.add(e);
-        StringBuilder sb = new StringBuilder();
-        bufferedWriter = new BufferedWriter(new FileWriter(new File(CSV_FILE_PATH)));
-        for(EmployeeList.Employee employee : employees){
-            sb.append(employee.getName());
-            sb.append(",");
-            sb.append(employee.getPassword());
-            sb.append(",");
-            sb.append(employee.getPrivileges());
-            bufferedWriter.write(sb.toString());
-            bufferedWriter.write("\n");
-            sb.setLength(0);
+    public boolean addNewEmployee(DatabaseActions database, String fname, String lname, String bday, char gender,
+                                  String curp, String rfc, char civilstate, String phone, String email,
+                                  String branch, String roletype, String username, String pass, int salary){
+        ResultSet resultSet = database.Read("SELECT * FROM users WHERE curp = '" + curp+ "'" + "AND username = "+
+                "'"+username+"';");
+        if(resultSet == null){
+            return false;
         }
-        bufferedWriter.flush();
-        bufferedWriter.close();
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("'"+fname+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+lname+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+bday+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+gender+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+curp+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+rfc+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+civilstate+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+phone+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+email+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+branch+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+roletype+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+username+"'");
+        stringBuilder.append(", ");
+        stringBuilder.append("'"+pass+"'");
+        stringBuilder.append(", ");
+        ResultSet set = database.Read("SELECT MAX(userid) FROM users;");
+        String newUserId = "";
+        String lastUserId = "";
+        try {
+            set.next();
+            lastUserId = set.getString(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        newUserId = String.valueOf(Integer.valueOf(lastUserId) + 1);
+
+        database.Write("INSERT INTO " + "users(firstname, lastname, birthday, gender, curp, rfc, " +
+                "civilstate, phone, email, branch, roletype, username, pass, salary, userid)" + "VALUES("+stringBuilder.toString()
+                + salary + ", " +"'"+newUserId +"'"+ ");");
+
         return true;
     }
-    public static int logIn(String name, String password){
-        for(Employee e : employees){
-            if(e.getName().equals(name)){
-                if(e.getPassword().equals(password)){
-                    switch (e.getPrivileges()){
-                        case 1:
-                            return 1;
-                        case 2:
-                            return 2;
-                    }
-                }else {
-                    return 0;
-                }
-
+    public static int logIn(DatabaseActions database, String name, String password) throws SQLException {
+        ResultSet resultSet = database.Read("SELECT * FROM users WHERE username = " + "'" + name + "'" + " AND " + "pass = " +
+                    "'" + password + "';");
+        if(resultSet == null){
+            return -1;
+        }else{
+            resultSet.next();
+            if(resultSet.getString(11).equals("Boss")){
+                return 2;
+            }else{
+                return 1;
             }
-        }
-        return -1;
-    }
-
-    //Inner class
-    private static class Employee{
-        private final String name;
-        private final String password;
-        private final int privileges;
-        public Employee(String name, String password, int privileges){
-            this.name = name;
-            this.password = password;
-            this.privileges = privileges;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getPassword() {
-            return password;
-        }
-
-        public int getPrivileges() {
-            return privileges;
         }
     }
 }

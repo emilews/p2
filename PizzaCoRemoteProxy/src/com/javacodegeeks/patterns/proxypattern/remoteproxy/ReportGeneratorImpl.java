@@ -1,5 +1,9 @@
 package com.javacodegeeks.patterns.proxypattern.remoteproxy;
 
+import com.javacodegeeks.patterns.proxypattern.remoteproxy.database.DatabaseActions;
+import com.javacodegeeks.patterns.proxypattern.remoteproxy.database.DatabaseFactory;
+
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
@@ -13,6 +17,7 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 	private static final long serialVersionUID = 3107413009881629428L;
 	static EmployeeList employeeList;
 	static Stores stores;
+	private static DatabaseActions database = null;
 
 	protected ReportGeneratorImpl() throws RemoteException {
 	}
@@ -21,7 +26,7 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 	@Override
 	public int logIn(String username, String password) {
 		System.out.println("Logging in: " + username + " with password: " + password);
-		return EmployeeList.logIn(username,password);
+		return EmployeeList.logIn(database, username, password);
 	}
 
 	@Override
@@ -76,6 +81,7 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 			Registry registry = LocateRegistry.createRegistry(9000);
 			ReportGenerator reportGenerator = new ReportGeneratorImpl();
 			registry.rebind("PizzaCoRemoteGenerator", reportGenerator);
+			database = DatabaseFactory.getInstance("postgresql");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

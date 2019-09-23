@@ -1,16 +1,11 @@
 package com.javacodegeeks.patterns.proxypattern.remoteproxy.database;
-
-import org.postgresql.core.ConnectionFactory;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class PostgreSQL implements DatabaseActions {
     //Conexión a postgresql
     private Connection connection;
     private String user = "postgres";
-    private String pass = "";
+    private String pass = "1234";
 
 
     public PostgreSQL() {
@@ -22,13 +17,44 @@ public class PostgreSQL implements DatabaseActions {
     }
 
     @Override
-    public String[] Read(String query) {
-        return new String[0];
+    public ResultSet Read(String query) {
+        Statement statement = null;
+        ResultSet resultSet = null;
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(statement != null){
+            try {
+                resultSet = statement.executeQuery(query);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if(resultSet != null){
+            return resultSet;
+        }else{
+            return null;
+        }
     }
 
     @Override
     public boolean Write(String query) {
-        return false;
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        try {
+            statement.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 
     @Override
