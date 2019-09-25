@@ -20,32 +20,65 @@ public class Stores {
     }
 
 
-    public String getStore(DatabaseActions database, String name) throws SQLException {
+    public String getStore(DatabaseActions database, int id) throws SQLException {
         StringBuilder sb = new StringBuilder();
-        ResultSet resultSet = database.Read("SELECT * FROM store WHERE storename = " + "'" + name +"';");
+        ResultSet resultSet = database.Read("SELECT * FROM store WHERE id = " + id +";");
         resultSet.next();
-        sb.append(resultSet.getString())
+        sb.append(resultSet.getString(2));
+        sb.append(",");
+        sb.append(resultSet.getString(3));
+        sb.append(",");
+        sb.append(resultSet.getString(4));
+        sb.append(",");
+        sb.append(resultSet.getString(5));
         return sb.toString();
     }
 
-    public boolean addNewStore(String name, String address, int id, int sales) throws IOException {
+    public boolean addNewStore(DatabaseActions database, String name, String address, int tel, int sales) throws IOException {
+        database.Write("INSERT INTO tiendas(nombre, direccion, telefono, ventas) VALUES(" + name +", " +
+                address + ", " + tel + ", " + sales + ");" );
 
         return true;
     }
 
-    public String getDailySalesByStore(String name) {
-        StringBuilder sb = new StringBuilder();
 
-        return sb.toString();
+    public int getOverallSales(DatabaseActions database){
+        ResultSet set = database.Read("SELECT SUM(ventas) FROM tiendas;");
+        if(set != null){
+            try {
+                set.next();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            try {
+                return Integer.valueOf(set.getString(1));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return -1;
+
     }
 
-    public int getOverallSales(){
-
-        return 0;
-    }
-
-    public String getAllStoreNames(){
+    public String getAllStoreNames(DatabaseActions database) throws SQLException {
         StringBuilder sb = new StringBuilder();
+        ResultSet set = database.Read("SELECT id, nombre FROM tiendas;");
+        if(set != null){
+            while (true) {
+                set.next();
+                if (set.isLast()) {
+                    sb.append(set.getString(1));
+                    sb.append("-");
+                    sb.append(set.getString(2));
+                    break;
+                } else {
+                    sb.append(set.getString(1));
+                    sb.append("-");
+                    sb.append(set.getString(2));
+                    sb.append(",");
+                }
+            }
+        }
         return sb.toString();
     }
 }

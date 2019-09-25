@@ -10,6 +10,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.sql.SQLException;
 import java.util.Date;
 
 public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGenerator{
@@ -26,19 +27,27 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 	@Override
 	public int logIn(String username, String password) {
 		System.out.println("Logging in: " + username + " with password: " + password);
-		return EmployeeList.logIn(database, username, password);
-	}
+        try {
+            return EmployeeList.logIn(database, username, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -2;
+    }
 
 	@Override
-	public String getStoresInfo(String name) {
-		return stores.getStore(name);
+	public String getStoresInfo(int id) {
+		try {
+			return stores.getStore(database,id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	@Override
 	public String getStoreSalesData(String name, int privileges) {
-		if(privileges > 1){
-			return stores.getDailySalesByStore(name);
-		}else { return "Not enough privileges!"; }
+		return null;
 	}
 
 	@Override
@@ -51,22 +60,13 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 	}
 
 	@Override
-	public boolean addNewUser(String name, String pass, int privileges) throws RemoteException {
-		try {
-			return employeeList.addNewEmployee(name,pass,privileges);
-		} catch (IOException e) {
-		return false;
-		}
+	public boolean addNewUser(int id, String name, String surname, String bday, String gender, String curp, String rfc, String estadocivil, String tel, String email,  String rol, String username, String pass, int salario) throws RemoteException {
+		return employeeList.addNewEmployee(database, id,name,surname,bday,gender, curp, rfc, estadocivil, tel,email, rol, username, pass, salario);
 	}
 
 	@Override
-	public boolean addNewStore(String name, String address, int id, int sales) throws RemoteException {
-		try {
-			stores.addNewStore(name,address,id,sales);
-		}catch (Exception e){
-			return false;
-		}
-		return true;
+	public boolean addNewStore(String name, String address, String tel, int sales) throws RemoteException {
+		return false;
 	}
 
 	@Override

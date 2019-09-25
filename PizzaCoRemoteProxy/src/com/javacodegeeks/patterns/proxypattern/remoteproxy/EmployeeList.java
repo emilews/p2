@@ -2,7 +2,6 @@ package com.javacodegeeks.patterns.proxypattern.remoteproxy;
 
 import com.javacodegeeks.patterns.proxypattern.remoteproxy.database.DatabaseActions;
 
-import java.io.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -19,15 +18,27 @@ public class EmployeeList {
         return instance;
     }
 
-    public boolean addNewEmployee(DatabaseActions database, String fname, String lname, String bday, char gender,
-                                  String curp, String rfc, char civilstate, String phone, String email,
-                                  String branch, String roletype, String username, String pass, int salary){
+    public boolean addNewEmployee(DatabaseActions database, int id, String fname, String lname, String bday, String gender,
+                                  String curp, String rfc, String civilstate, String phone, String email,
+                                  String roletype, String username, String pass, int salary){
         ResultSet resultSet = database.Read("SELECT * FROM users WHERE curp = '" + curp+ "'" + "AND username = "+
                 "'"+username+"';");
         if(resultSet == null){
             return false;
         }
+        ResultSet set = database.Read("SELECT MAX(userid) FROM users;");
+        String newUserId = "";
+        String lastUserId = "";
+        try {
+            set.next();
+            lastUserId = set.getString(1);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        newUserId = String.valueOf(Integer.valueOf(lastUserId) + 1);
         StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("'"+newUserId+"'");
+        stringBuilder.append(", ");
         stringBuilder.append("'"+fname+"'");
         stringBuilder.append(", ");
         stringBuilder.append("'"+lname+"'");
@@ -46,27 +57,15 @@ public class EmployeeList {
         stringBuilder.append(", ");
         stringBuilder.append("'"+email+"'");
         stringBuilder.append(", ");
-        stringBuilder.append("'"+branch+"'");
-        stringBuilder.append(", ");
         stringBuilder.append("'"+roletype+"'");
         stringBuilder.append(", ");
         stringBuilder.append("'"+username+"'");
         stringBuilder.append(", ");
         stringBuilder.append("'"+pass+"'");
         stringBuilder.append(", ");
-        ResultSet set = database.Read("SELECT MAX(userid) FROM users;");
-        String newUserId = "";
-        String lastUserId = "";
-        try {
-            set.next();
-            lastUserId = set.getString(1);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        newUserId = String.valueOf(Integer.valueOf(lastUserId) + 1);
 
-        database.Write("INSERT INTO " + "users(firstname, lastname, birthday, gender, curp, rfc, " +
-                "civilstate, phone, email, branch, roletype, username, pass, salary, userid)" + "VALUES("+stringBuilder.toString()
+        database.Write("INSERT INTO " + "usuarios(id, nombre, apellidos, fechanaci, genero, curp, " +
+                "rfc, estadocivil, telefono, email, rol, username, pass, salary) " + "VALUES("+stringBuilder.toString()
                 + salary + ", " +"'"+newUserId +"'"+ ");");
 
         return true;
