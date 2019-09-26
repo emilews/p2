@@ -10,6 +10,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.sql.SQLException;
 import java.util.Date;
 
 public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGenerator{
@@ -26,12 +27,22 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 	@Override
 	public int logIn(String username, String password) {
 		System.out.println("Logging in: " + username + " with password: " + password);
-		return EmployeeList.logIn(database, username, password);
+		try {
+			return EmployeeList.logIn(database, username, password);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return 99;
 	}
 
 	@Override
 	public String getStoresInfo(String name) {
-		return stores.getStore(name);
+		try {
+			return stores.getStore(database,name);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return "";
 	}
 
 	@Override
@@ -52,11 +63,7 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 
 	@Override
 	public boolean addNewUser(String name, String pass, int privileges) throws RemoteException {
-		try {
-			return employeeList.addNewEmployee(name,pass,privileges);
-		} catch (IOException e) {
 		return false;
-		}
 	}
 
 	@Override

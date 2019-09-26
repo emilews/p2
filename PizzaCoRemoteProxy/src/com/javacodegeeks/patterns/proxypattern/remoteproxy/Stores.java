@@ -20,28 +20,57 @@ public class Stores {
     }
 
 
-    public String getStore(DatabaseActions database, String name) throws SQLException {
+    public String getStore(DatabaseActions database, String name, int id) throws SQLException {
         StringBuilder sb = new StringBuilder();
-        ResultSet resultSet = database.Read("SELECT * FROM store WHERE storename = " + "'" + name +"';");
+        ResultSet resultSet = database.Read("SELECT * FROM tiendas WHERE id = " + id + " AND  nombre = " + name + ";");
+        if(resultSet == null){
+            return null;
+        }
         resultSet.next();
-        sb.append(resultSet.getString())
+        sb.append(resultSet.getString(1));
+        sb.append(",");
+        sb.append(resultSet.getString(2));
+        sb.append(",");
+        sb.append(resultSet.getString(3));
+        sb.append(",");
+        sb.append(resultSet.getString(4));
+        sb.append(",");
+        sb.append(resultSet.getString(5));
+        sb.append(",");
+        sb.append(resultSet.getString(6));
         return sb.toString();
     }
 
-    public boolean addNewStore(String name, String address, int id, int sales) throws IOException {
-
-        return true;
-    }
-
-    public String getDailySalesByStore(String name) {
+    public boolean addNewStore(DatabaseActions database, String name, String address,String tel, int enc, int sales) throws IOException {
         StringBuilder sb = new StringBuilder();
-
-        return sb.toString();
+        sb.append("'" + name + "'");
+        sb.append(",");
+        sb.append("'"+address+"'");
+        sb.append("'"+tel+"'");
+        sb.append(",");
+        if(enc == 0){
+            sb.append("null");
+        }else{
+            sb.append(enc);
+        }
+        sb.append(",");
+        sb.append(sales);
+        boolean result = database.Write("INSERT INTO tiendas(nombre, direccion, telefono, encargadoid, ventas) VALUES (" + sb.toString()+ ");");
+        if(result){
+            return true;
+        }else{
+            return false;
+        }
     }
 
-    public int getOverallSales(){
-
-        return 0;
+    public int getOverallSales(DatabaseActions database) throws SQLException {
+        ResultSet set = database.Read("SELECT SUM(ventas) FROM tiendas;");
+        if(set == null){
+            return 0;
+        }
+        set.next();
+        int ventas = Integer.valueOf(set.getString(1));
+        return ventas;
     }
 
     public String getAllStoreNames(){

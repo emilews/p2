@@ -3,16 +3,16 @@ import java.sql.*;
 
 public class PostgreSQL implements DatabaseActions {
     //Conexión a postgresql
-    private Connection connection;
+    private Connection connection = null;
     private String user = "postgres";
-    private String pass = "1234";
+    private String pass = "Cebiche123";
 
 
     public PostgreSQL() {
         try {
             connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dbds413", user, pass);
         }catch (SQLException e){
-
+            e.printStackTrace();
         }
     }
 
