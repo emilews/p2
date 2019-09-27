@@ -3,18 +3,56 @@
   <component name="ChangeListManager">
     <list default="true" id="b8489244-6176-40ae-9851-a9789942147f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PizzaCoRemoteProxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PizzaCoRemoteProxy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/AllTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/AllTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test/AllTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/META-INF/PizzaCoReportGeneratorRemoteProtectionProxy.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/Composite/Validator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/Composite/loginValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/Composite/storeData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/Composite/userData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/Composite/userValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/Composite/validatorNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewStore.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewStore.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ViewStoresController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ViewStoresController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/StoreValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/StoreValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/NameFieldValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserDataValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewStore.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewStore.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ViewStoresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ViewStoresController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/StoreValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/loginValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/storeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/storeData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/NameFieldValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserDataValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/userData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/userValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/userValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/validatorNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/validatorNode.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +94,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -70,7 +109,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AllTests">
+  <component name="RunManager" selected="Application.ReportGeneratorImpl">
     <configuration name="AllTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.AllTests" />
       <module name="PizzaCoRemoteProxy" />
@@ -99,6 +138,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReportGeneratorImpl" />
         <item itemvalue="Application.AllTests" />
       </list>
     </recent_temporary>
@@ -121,7 +161,7 @@
       <workItem from="1569340244342" duration="1635000" />
       <workItem from="1569343028939" duration="3147000" />
       <workItem from="1569520905133" duration="5733000" />
-      <workItem from="1569601427875" duration="4717000" />
+      <workItem from="1569601427875" duration="12776000" />
     </task>
     <servers />
   </component>

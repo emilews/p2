@@ -46,13 +46,13 @@ public class SalesByStoreController implements Initializable {
     }
 
     public void lookForSalesByStore() throws RemoteException {
-        if(!storesChoiceBox.getValue().equals("")){
-            String[] store = ReportGeneratorClient.getStoreSales(storesChoiceBox.getValue()).split(",");
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Tienda: " + store[0]);
-            alert.setHeaderText("Sucursal número: " + store[1]);
-            alert.setContentText("Total de ventas: " + store[2]);
-            alert.showAndWait();
-        }
+        String[] store = ReportGeneratorClient.reportGenerator.getStoresInfo(storesChoiceBox.getValue().split("-")[1],
+                Integer.valueOf(storesChoiceBox.getValue().split("-")[0])).split(",");
+        System.out.println(store);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Tienda: " + store[1]);
+        alert.setHeaderText("Sucursal número: " + store[0]);
+        alert.setContentText("Total de ventas: " + store[4]);
+        alert.showAndWait();
     }
 }

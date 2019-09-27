@@ -1,4 +1,4 @@
-package com.javacodegeeks.patterns.proxypattern.remoteproxy.validator.user;
+package com.javacodegeeks.patterns.proxypattern.remoteproxy.validator;
 
 public class UserInfo {
     private String name;

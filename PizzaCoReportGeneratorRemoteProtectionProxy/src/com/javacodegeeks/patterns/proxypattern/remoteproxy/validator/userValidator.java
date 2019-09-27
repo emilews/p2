@@ -3,51 +3,53 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Composite;
+package com.javacodegeeks.patterns.proxypattern.remoteproxy.validator;
+
+
+import com.javacodegeeks.patterns.proxypattern.remoteproxy.validator.user.UserValidator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Mike
- */
-import java.util.ArrayList;
-import java.util.List;
+public class userValidator implements UserValidator<UserInfo> {
 
-public class userValidator extends Validator<userData> {
 
-    @Override
-    public List<String> Validate(userData data) {
-        List<String> errors = new ArrayList<String>();
-
-        if (data.nombre.isEmpty()) errors.add("Nombre must be populated");
-        if (data.apellido.isEmpty()) errors.add("Apellido must be populated");
-        if (data.fechanac.isEmpty()&& checkMajority(data.fechanac)){
-            errors.add("Fecha de nacimiento must be populated and you must be "
-                    + "above the avarage age");
-        }
-        if (data.curp.isEmpty()) errors.add("CURP must be populated");
-        if (data.rfc.isEmpty()) errors.add("RFC must be populated");
-        if (data.estadoc.isEmpty()) errors.add("Estado Civil must be populated");
-        if (data.telefono.isEmpty()) errors.add("Telefono must be populated");
-        if (data.email.isEmpty()) errors.add("EMail must be populated");
-        //SUCURSAL OPCIONAL
-        //OCUPACION COMBOBOX
-        //USERNAME EN loginValidator
-        //PASSWORD EN loginValidator
-        //SALARIO OPCIONAL
-
-        return errors;
-    }
     public boolean checkMajority(String birthday){
         String[] sbirth;
-        sbirth = birthday.split("/",3);
-        int año = Integer.parseInt(sbirth[2]);
+        sbirth = birthday.split("-",3);
+        int año = Integer.parseInt(sbirth[0]);
         if(año<=2001){
             return true;
         }
         return false;
     }
 
+    @Override
+    public List<String> validateUser(UserInfo data) {
+        List<String> errors = new ArrayList<>();
+        if (data.getName().isEmpty()) {
+            errors.add("Campo nombre debe estar lleno");
+        }
+        if (data.getLastname().isEmpty()) {
+            errors.add("Campo apellidos debe estar lleno");
+        }
+
+        if (data.getCurp().isEmpty()) errors.add("Campo de curp obligatorio");
+        if (data.getRfc().isEmpty()) errors.add("Campo de rfc obligatotrio");
+        if (data.getEstado().isEmpty()) errors.add("Campo de estado civil obligatorio");
+        if (data.getTel().isEmpty()) errors.add("Campo de telefono obligatorio");
+        if (data.getEmail().isEmpty()) errors.add("Campo de email obligatorio");
+        if(!checkMajority(data.getBday())){
+            errors.add("Debe ser mayor de edad");
+        }
+        if (data.getBday().isEmpty()){
+            errors.add("Campo de fecha de nacimiento debe estar lleno");
+        }
+        return errors;
+    }
+
+    @Override
+    public List<String> validateStore(UserInfo info) {
+        return null;
+    }
 }

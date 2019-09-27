@@ -1,18 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Composite;
+package com.javacodegeeks.patterns.proxypattern.remoteproxy.validator;
 
-/**
- *
- * @author Mike
- */
 public class storeData {
-    String nombre;
-    String direccion;
-    String telefono;
-    String encargado;
-    int ganacias;
+    private String nombre;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public int getGanacias() {
+        return ganacias;
+    }
+
+    public storeData(String nombre, String direccion, String telefono, int ganacias) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.ganacias = ganacias;
+    }
+
+    private String direccion;
+    private String telefono;
+    private int ganacias;
 }

@@ -3,18 +3,57 @@
   <component name="ChangeListManager">
     <list default="true" id="4f3f78be-0f46-4a9a-9299-db6b10311b0a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/PizzaCoRemoteProxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/PizzaCoRemoteProxy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/test/AllTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/bin/test/AllTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/test/test/AllTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoRemoteProxy/src/test/test/AllTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/META-INF/PizzaCoReportGeneratorRemoteProtectionProxy.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Composite/Validator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Composite/loginValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Composite/storeData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Composite/userData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Composite/userValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Composite/validatorNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewStore.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewStore.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ViewStoresController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ViewStoresController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/StoreValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/StoreValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/NameFieldValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserDataValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmpView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewStore.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewStore.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/NewUser.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/OwnerView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ViewStoresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ViewStoresController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/StoreValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/loginValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/storeData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/storeData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/NameFieldValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserDataValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/userData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/userValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/userValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/validatorNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/validatorNode.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +85,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PizzaCoRemoteProxy/libs/mysql-connector-java-5.1.48.jar!/" />
+    <property name="last_opened_file_path" value="C:/Program Files/SceneBuilder/SceneBuilder.exe" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,6 +97,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -76,7 +116,7 @@
     <configuration name="ReportGeneratorClient" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.javacodegeeks.patterns.proxypattern.remoteproxy.ReportGeneratorClient" />
       <module name="PizzaCoReportGeneratorRemoteProtectionProxy" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\CSI-PRO\Desktop\jdk-12.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\CSI-PRO\Desktop\javafx-sdk-11.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.javacodegeeks.patterns.proxypattern.remoteproxy.*" />
@@ -108,7 +148,7 @@
       <workItem from="1569179159285" duration="4703000" />
       <workItem from="1569343273286" duration="723000" />
       <workItem from="1569520910715" duration="4217000" />
-      <workItem from="1569604143312" duration="1487000" />
+      <workItem from="1569604143312" duration="18914000" />
     </task>
     <servers />
   </component>

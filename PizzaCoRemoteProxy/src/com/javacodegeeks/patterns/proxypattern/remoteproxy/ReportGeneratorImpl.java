@@ -10,6 +10,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -47,6 +48,25 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 
 	@Override
 	public String getStoreSalesData(String name, int privileges) {
+		if(privileges > 1){
+			return null;
+		}else{
+			StringBuilder sb = new StringBuilder();
+			ResultSet set = database.Read("SELECT * FROM tiendas WHERE nombre = " + name + ";");
+			if(set != null){
+				try {
+					set.next();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+				try {
+					sb.append(set.getString(5));
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+				return sb.toString();
+			}
+		}
 		return null;
 	}
 
@@ -72,9 +92,9 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 
 
 	@Override
-	public boolean addNewStore(String name, String address,String tel, int id, int sales) throws RemoteException {
+	public boolean addNewStore(String name, String address,String tel, int sales) throws RemoteException {
 		try {
-			stores.addNewStore(database, name,address,tel,id,sales);
+			stores.addNewStore(database, name,address,tel,sales);
 		}catch (Exception e){
 			return false;
 		}

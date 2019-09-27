@@ -3,11 +3,14 @@ package com.javacodegeeks.patterns.proxypattern.remoteproxy;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 
+import java.io.IOException;
 import java.net.URL;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
@@ -19,7 +22,8 @@ public class EmpController implements Initializable {
     ChoiceBox<String> storesChoiceBox;
     @FXML
     Button lookForStoreSales;
-
+    @FXML
+    Button salirButton;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<String> list = new ArrayList<String>();
@@ -37,15 +41,20 @@ public class EmpController implements Initializable {
         storesChoiceBox.getItems().removeAll(storesChoiceBox.getItems());
         storesChoiceBox.getItems().addAll(list);
     }
-
     public void lookForSalesByStore() throws RemoteException {
         if(!storesChoiceBox.getValue().equals("")){
-            String[] store = ReportGeneratorClient.reportGenerator.getStoresInfo(storesChoiceBox.getValue()).split(",");
+            String[] store = ReportGeneratorClient.reportGenerator.getStoresInfo(storesChoiceBox.getValue().split("-")[1],
+                    Integer.valueOf(storesChoiceBox.getValue().split("-")[0])).split(",");
+            System.out.println(store);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Tienda: " + store[0]);
-            alert.setHeaderText("Dirección: " + store[1]);
-            alert.setContentText("Sucursal número: " + store[2]);
+            alert.setTitle("Tienda: " + store[1]);
+            alert.setHeaderText("Sucursal número: " + store[0]);
+            alert.setContentText("Total de ventas: " + store[4] + "\n" + "Número de tel: " + store[3] +  "\n" + "Dirección: " + store[2]);
             alert.showAndWait();
         }
+    }
+
+    public void salir() throws IOException {
+        ReportGeneratorClient.salir();
     }
 }

@@ -73,7 +73,7 @@ public class EmployeeList {
         stringBuilder.append("'"+pass+"'");
         stringBuilder.append(", ");
         stringBuilder.append(salary);
-
+        System.out.println(stringBuilder.toString());
         database.Write("INSERT INTO " + "usuarios(id, nombre, apellidos, fechanaci, genero, curp, rfc, estadocivil, telefono, email, rol," +
                 "username, pass, salario)" + "VALUES(" + stringBuilder.toString() + ");");
 

@@ -44,8 +44,8 @@ public class ReportGeneratorClient extends Application implements ReportGenerato
 	}
 
     @Override
-    public String getStoresInfo(String name) throws RemoteException {
-        return reportGenerator.getStoresInfo(name);
+    public String getStoresInfo(String name, int id) throws RemoteException {
+        return reportGenerator.getStoresInfo(name,id);
     }
 
     @Override
@@ -59,13 +59,14 @@ public class ReportGeneratorClient extends Application implements ReportGenerato
     }
 
     @Override
-    public boolean addNewUser(String name, String pass, int privileges) throws RemoteException {
-        return reportGenerator.addNewUser(name, pass, privileges);
+    public boolean addNewUser(String fname, String lname, String bday, String gender, String curp, String rfc, String civilstate, String phone, String email, String roletype, String username, String pass, int salary) throws RemoteException {
+        return reportGenerator.addNewUser(fname,lname,bday,gender,curp,rfc,civilstate,phone,email,roletype,username,pass,salary);
     }
 
+
     @Override
-    public boolean addNewStore(String name, String address, int id, int sales) throws RemoteException {
-        return reportGenerator.addNewStore(name, address,id, sales);
+    public boolean addNewStore(String name, String address, String tel , int sales) throws RemoteException {
+        return reportGenerator.addNewStore(name, address,tel, sales);
     }
 
     @Override
@@ -148,5 +149,9 @@ public class ReportGeneratorClient extends Application implements ReportGenerato
 
     public static String getAllNames() throws RemoteException {
 	    return storeNames;
+    }
+    public static void salir() throws IOException {
+        Parent root = FXMLLoader.load(ReportGeneratorClient.class.getResource("Main.fxml"));
+        s.getScene().setRoot(root);
     }
 }

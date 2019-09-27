@@ -29,7 +29,7 @@ public class ViewStoresController implements Initializable {
         String[] s = new String[0];
         try {
             s = ReportGeneratorClient.getAllNames().split(",");
-        } catch (RemoteException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         for(String st: s){
@@ -46,11 +46,13 @@ public class ViewStoresController implements Initializable {
 
     public void lookForSalesByStore() throws RemoteException {
         if(!storesChoiceBox.getValue().equals("")){
-            String[] store = ReportGeneratorClient.reportGenerator.getStoresInfo(storesChoiceBox.getValue()).split(",");
+            String[] store = ReportGeneratorClient.reportGenerator.getStoresInfo(storesChoiceBox.getValue().split("-")[1],
+                    Integer.valueOf(storesChoiceBox.getValue().split("-")[0])).split(",");
+            System.out.println(store);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Tienda: " + store[0]);
-            alert.setHeaderText("Direción: " + store[1]);
-            alert.setContentText("Sucursal número: " + store[2]);
+            alert.setTitle("Tienda: " + store[1]);
+            alert.setHeaderText("Sucursal número: " + store[0]);
+            alert.setContentText("Total de ventas: " + store[4] + "\n" + "Número de tel: " + store[3] +  "\n" + "Dirección: " + store[2]);
             alert.showAndWait();
         }
     }

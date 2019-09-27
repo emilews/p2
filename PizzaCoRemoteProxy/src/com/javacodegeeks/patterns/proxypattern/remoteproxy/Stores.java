@@ -22,7 +22,9 @@ public class Stores {
 
     public String getStore(DatabaseActions database, String name, int id) throws SQLException {
         StringBuilder sb = new StringBuilder();
-        ResultSet resultSet = database.Read("SELECT * FROM tiendas WHERE id = " + id + " AND  nombre = " + name + ";");
+        System.out.println(name);
+        System.out.println(id);
+        ResultSet resultSet = database.Read("SELECT * FROM tiendas WHERE id = " + id + " AND  nombre = '" + name + "';");
         if(resultSet == null){
             return null;
         }
@@ -36,26 +38,19 @@ public class Stores {
         sb.append(resultSet.getString(4));
         sb.append(",");
         sb.append(resultSet.getString(5));
-        sb.append(",");
-        sb.append(resultSet.getString(6));
         return sb.toString();
     }
 
-    public boolean addNewStore(DatabaseActions database, String name, String address,String tel, int enc, int sales) throws IOException {
+    public boolean addNewStore(DatabaseActions database, String name, String address,String tel, int sales) throws IOException {
         StringBuilder sb = new StringBuilder();
         sb.append("'" + name + "'");
         sb.append(",");
         sb.append("'"+address+"'");
+        sb.append(",");
         sb.append("'"+tel+"'");
         sb.append(",");
-        if(enc == 0){
-            sb.append("null");
-        }else{
-            sb.append(enc);
-        }
-        sb.append(",");
         sb.append(sales);
-        boolean result = database.Write("INSERT INTO tiendas(nombre, direccion, telefono, encargadoid, ventas) VALUES (" + sb.toString()+ ");");
+        boolean result = database.Write("INSERT INTO tiendas(nombre, direccion, telefono, ventas) VALUES (" + sb.toString()+ ");");
         if(result){
             return true;
         }else{
