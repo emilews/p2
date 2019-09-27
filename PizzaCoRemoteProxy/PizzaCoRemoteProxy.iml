@@ -11,5 +11,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="library" name="mysql-connector-java-5.1.48" level="project" />
     <orderEntry type="library" name="postgresql-42.2.8" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

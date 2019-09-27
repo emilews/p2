@@ -36,9 +36,9 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 	}
 
 	@Override
-	public String getStoresInfo(String name) {
+	public String getStoresInfo(String name, int id) {
 		try {
-			return stores.getStore(database,name);
+			return stores.getStore(database, name, id);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -47,29 +47,34 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 
 	@Override
 	public String getStoreSalesData(String name, int privileges) {
-		if(privileges > 1){
-			return stores.getDailySalesByStore(name);
-		}else { return "Not enough privileges!"; }
+		return null;
 	}
 
 	@Override
 	public int getOverallSalesData(int privileges) {
 		if(privileges > 1){
-			return stores.getOverallSales();
+			try {
+				return stores.getOverallSales(database);
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}else{
 			return -1;
 		}
+		return -1;
 	}
 
 	@Override
-	public boolean addNewUser(String name, String pass, int privileges) throws RemoteException {
-		return false;
+	public boolean addNewUser(String fname, String lname, String bday, String gender, String curp, String rfc, String civilstate,
+							  String phone, String email, String roletype, String username, String pass, int salary) throws RemoteException {
+		return employeeList.addNewEmployee(database, fname, lname, bday,gender, curp, rfc, civilstate, phone,email,roletype,username,pass,salary);
 	}
 
+
 	@Override
-	public boolean addNewStore(String name, String address, int id, int sales) throws RemoteException {
+	public boolean addNewStore(String name, String address,String tel, int id, int sales) throws RemoteException {
 		try {
-			stores.addNewStore(name,address,id,sales);
+			stores.addNewStore(database, name,address,tel,id,sales);
 		}catch (Exception e){
 			return false;
 		}
@@ -78,7 +83,12 @@ public class ReportGeneratorImpl extends UnicastRemoteObject implements ReportGe
 
 	@Override
 	public String getAllStoreNames() throws RemoteException {
-		return stores.getAllStoreNames();
+		try {
+			return stores.getAllStoreNames(database);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	public static void main(String[] args) {

@@ -73,8 +73,25 @@ public class Stores {
         return ventas;
     }
 
-    public String getAllStoreNames(){
+    public String getAllStoreNames(DatabaseActions database) throws SQLException {
         StringBuilder sb = new StringBuilder();
+        ResultSet set = database.Read("SELECT id, nombre FROM tiendas;");
+        if(set != null){
+            while(true){
+                set.next();
+                if(set.isLast()){
+                    sb.append(set.getString(1));
+                    sb.append("-");
+                    sb.append(set.getString(2));
+                    break;
+                }else{
+                    sb.append(set.getString(1));
+                    sb.append("-");
+                    sb.append(set.getString(2));
+                    sb.append(",");
+                }
+            }
+        }
         return sb.toString();
     }
 }

@@ -3,8 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="b8489244-6176-40ae-9851-a9789942147f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PizzaCoRemoteProxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PizzaCoRemoteProxy.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/EmployeeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/ReportGeneratorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/Stores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/src/com/javacodegeeks/patterns/proxypattern/remoteproxy/validator/user/UserValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/META-INF/PizzaCoReportGeneratorRemoteProtectionProxy.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy/bin/com/javacodegeeks/patterns/proxypattern/remoteproxy/SalesByStoreController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +44,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PizzaCoReportGeneratorRemoteProtectionProxy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javafx-sdk-11.0.2/lib" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -110,7 +120,8 @@
       <workItem from="1569179165078" duration="23400000" />
       <workItem from="1569340244342" duration="1635000" />
       <workItem from="1569343028939" duration="3147000" />
-      <workItem from="1569520905133" duration="5732000" />
+      <workItem from="1569520905133" duration="5733000" />
+      <workItem from="1569601427875" duration="4717000" />
     </task>
     <servers />
   </component>

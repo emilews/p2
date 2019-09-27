@@ -23,8 +23,8 @@ public class EmployeeList {
         return instance;
     }
 
-    public boolean addNewEmployee(DatabaseActions database, String fname, String lname, String bday, char gender,
-                                  String curp, String rfc, char civilstate, String phone, String email,
+    public boolean addNewEmployee(DatabaseActions database, String fname, String lname, String bday, String gender,
+                                  String curp, String rfc, String civilstate, String phone, String email,
                                   String roletype, String username, String pass, int salary){
         ResultSet resultSet = database.Read("SELECT * FROM usuarios WHERE curp = '" + curp+ "'" + "AND username = "+
                 "'"+username+"';");
@@ -37,9 +37,13 @@ public class EmployeeList {
         try {
             set.next();
             lastUserId = set.getString(1);
-            newUserId = String.valueOf(Integer.valueOf(lastUserId) + 1);
         } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if(lastUserId == null){
             newUserId = Calendar.getInstance().get(Calendar.YEAR) + "000" + 1;
+        }else{
+            newUserId = String.valueOf(Integer.valueOf(lastUserId) + 1);
         }
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(newUserId);
