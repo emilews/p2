@@ -1,4 +1,4 @@
-package com.javacodegeeks.patterns.proxypattern.remoteproxy.validator;
+package com.javacodegeeks.patterns.proxypattern.remoteproxy.validator.user;
 
 import java.util.List;
 
